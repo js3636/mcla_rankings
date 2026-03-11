@@ -726,12 +726,12 @@ const METHODS = [
   {key:'n_amov',  label:'AMoV',          weight:0.14, color:'#ff6b35', desc:'Adjusted Margin of Victory. Removes home advantage, applies log-diminishing returns on blowouts.'},
   {key:'n_massey',label:'Massey',        weight:0.15, color:'#47d4ff', desc:'Least-squares score differential. Solves the system: rating_i - rating_j ≈ margin_ij.'},
   {key:'n_colley',label:'Colley',        weight:0.13, color:'#a78bfa', desc:'Linear algebra win/loss matrix. Used in the BCS era — schedule strength is encoded implicitly.'},
-  {key:'n_markov',label:'Markov Chain',  weight:0.12, color:'#34d399', desc:'Random walk: winning votes flow to the winner, proportional to the loser's Markov score.'},
+  {key:'n_markov',label:'Markov Chain',  weight:0.12, color:'#34d399', desc:'Random walk: winning votes flow to the winner, proportional to the losers Markov score.'},
   {key:'n_bt',    label:'Bradley-Terry', weight:0.10, color:'#f472b6', desc:'Max-likelihood pairwise comparison. The gold standard statistical model for head-to-head data.'},
   {key:'n_pyth',  label:'Pythagorean',   weight:0.08, color:'#fb923c', desc:'Bill James method: (GF^2.37) / (GF^2.37 + GA^2.37). Corrects for luck in close wins.'},
   {key:'n_wq',    label:'Win Quality',   weight:0.05, color:'#60a5fa', desc:'Iterative: each win weighted by how strong the opponent is. Converges in ~10 iterations.'},
   {key:'n_sos',   label:'SOS',           weight:0.02, color:'#fbbf24', desc:'Strength of Schedule: average win percentage of opponents faced.'},
-  {key:'n_osos',  label:'OSOS',          weight:0.01, color:'#c084fc', desc:'Opponents' Strength of Schedule: 2nd-order schedule difficulty.'},
+  {key:'n_osos',  label:'OSOS',          weight:0.01, color:'#c084fc', desc:'Opponents Strength of Schedule: 2nd-order schedule difficulty.'}
 ];
 
 let currentDiv = 'DI';
