@@ -2,10 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="theme-color" content="#09090b">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MCLA 2026 Power Rankings</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;600;700&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
@@ -45,13 +42,11 @@
     max-width: 1400px; margin: 0 auto;
     padding: 0 24px;
     display: flex; align-items: stretch; justify-content: space-between;
-    flex-wrap: wrap;
   }
   .brand {
     display: flex; align-items: center; gap: 14px;
     padding: 18px 0;
     text-decoration: none; color: inherit;
-    flex: 1;
   }
   .logo-mark {
     width: 42px; height: 42px;
@@ -83,7 +78,6 @@
     letter-spacing: 0.12em; text-transform: uppercase;
     color: var(--muted); border-bottom: 2px solid transparent;
     transition: all 0.15s; height: 100%;
-    -webkit-tap-highlight-color: transparent;
   }
   .nav-btn:hover { color: var(--text); }
   .nav-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
@@ -92,7 +86,6 @@
     font-size: 0.72rem; color: var(--muted);
     letter-spacing: 0.08em; padding: 0 0 0 16px;
     border-left: 1px solid var(--border); margin-left: 8px;
-    white-space: nowrap;
   }
   .live-dot {
     width: 6px; height: 6px; border-radius: 50%;
@@ -182,7 +175,6 @@
     color: var(--muted); background: transparent; border: none;
     border-bottom: 2px solid transparent; margin-bottom: -1px;
     transition: all 0.15s;
-    -webkit-tap-highlight-color: transparent;
   }
   .div-tab[data-div="DI"] { --tc: var(--di); }
   .div-tab[data-div="DII"] { --tc: var(--dii); }
@@ -220,7 +212,6 @@
     text-transform: uppercase;
     background: transparent; border: 1px solid var(--border);
     color: var(--muted); transition: all 0.15s;
-    -webkit-tap-highlight-color: transparent;
   }
   .sort-btn.active {
     background: var(--accent); border-color: var(--accent);
@@ -359,8 +350,6 @@
     padding: 11px 24px; cursor: pointer;
     font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem;
     letter-spacing: 0.08em; color: #000; transition: opacity 0.15s;
-    -webkit-tap-highlight-color: transparent;
-    width: 100%;
   }
   .pred-btn:hover { opacity: 0.85; }
   .pred-error { color: var(--accent2); font-size: 0.82rem; margin-top: 10px; }
@@ -457,152 +446,18 @@
   }
 
   /* ── RESPONSIVE ── */
-
-  /* ── TABLET (≤900px) ── */
-  @media (max-width: 900px) {
-    .hero-inner { grid-template-columns: 1fr; gap: 20px; }
-    .hero-stats  { min-width: 0; }
-    .about-grid  { grid-template-columns: 1fr; }
-    .expand-grid { grid-template-columns: 1fr 1fr; }
-  }
-
-  /* ── MOBILE (≤768px) ── */
   @media (max-width: 768px) {
-
-    /* Header: stack brand + updated on top, nav below */
-    .header-inner {
-      flex-wrap: wrap;
-      padding: 0 14px;
-      gap: 0;
-    }
-    .brand { padding: 12px 0; flex: 1; }
-    .brand-title { font-size: 1.3rem; }
-    .brand-sub { display: none; }
-    .logo-mark { width: 34px; height: 34px; }
-    .logo-mark svg { width: 20px; height: 20px; }
-
-    /* Updated badge sits right of brand */
-    .header-updated {
-      border-left: none;
-      margin-left: 0;
-      padding: 0;
-      font-size: 0.65rem;
-      align-self: center;
-    }
-
-    /* Nav scrolls horizontally under brand row */
-    .header-nav {
-      width: 100%;
-      order: 3;
-      border-top: 1px solid var(--border);
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      scrollbar-width: none;
-      gap: 0;
-    }
-    .header-nav::-webkit-scrollbar { display: none; }
-    .nav-btn {
-      padding: 10px 14px;
-      font-size: 0.78rem;
-      white-space: nowrap;
-      flex-shrink: 0;
-      height: auto;
-      border-bottom: 2px solid transparent;
-    }
-    .nav-btn.active { border-bottom-color: var(--accent); }
-
-    /* Hero */
-    .hero { padding: 24px 14px 20px; }
-    .hero::before { font-size: 6rem; top: -10px; }
-    .hero-title { font-size: clamp(2rem, 9vw, 3rem); }
-    .hero-desc { font-size: 0.82rem; }
-    .hero-stats {
-      grid-template-columns: repeat(2, 1fr);
-      min-width: 0;
-    }
-    .stat-val { font-size: 1.4rem; }
-    .stat-lbl { font-size: 0.6rem; }
-    .stat-cell { padding: 12px 10px; }
-
-    /* Page body */
-    .page-body { padding: 16px 14px 60px; }
-
-    /* Division tabs scroll */
-    .div-tabs {
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      scrollbar-width: none;
-      flex-wrap: nowrap;
-      gap: 0;
-    }
-    .div-tabs::-webkit-scrollbar { display: none; }
-    .div-tab {
-      padding: 10px 16px;
-      font-size: 0.82rem;
-      white-space: nowrap;
-      flex-shrink: 0;
-    }
-
-    /* Controls bar */
-    .controls { flex-direction: column; align-items: flex-start; gap: 8px; }
-    .search-wrap { max-width: 100%; width: 100%; }
-    .sort-btns { flex-wrap: wrap; gap: 6px; }
-    .sort-btn { padding: 7px 13px; font-size: 0.72rem; }
-
-    /* Table: full columns, horizontal scroll */
-    .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-    table { min-width: 700px; }
-
-    /* Tighten up cells so table fits more comfortably */
-    th { padding: 8px 9px; font-size: 0.63rem; }
-    td { padding: 9px 9px; font-size: 0.8rem; white-space: nowrap; }
-    .team-name { font-size: 0.88rem; max-width: 160px; }
-    .rank-num { font-size: 1rem; width: 26px; }
-    .score-cell { font-size: 1rem; }
-
-    /* Expanded row: single column */
-    .expand-grid { grid-template-columns: 1fr; gap: 16px; }
-    .expand-inner { padding: 14px 14px 18px; }
-    .method-label { width: 70px; font-size: 0.68rem; }
-
-    /* Predictor: stack team inputs */
-    .predictor-wrap { max-width: 100%; }
-    .pred-card { padding: 18px 16px; }
-    .pred-row {
-      grid-template-columns: 1fr;
-      gap: 12px;
-    }
-    .pred-vs { display: none; }
-    .prob-models { grid-template-columns: repeat(3,1fr); gap: 6px; }
-    .prob-model { padding: 8px 6px; }
-    .prob-model-val { font-size: 1.2rem; }
-    .prob-model-label { font-size: 0.6rem; }
-    .prob-teams {
-      flex-direction: column;
-      gap: 2px;
-      font-size: 0.88rem;
-    }
-
-    /* Method grid */
-    .method-grid { grid-template-columns: 1fr; }
-
-    /* About */
+    .hero-inner { grid-template-columns: 1fr; }
+    .hero-stats { min-width: 0; grid-template-columns: repeat(2,1fr); }
+    .expand-grid { grid-template-columns: 1fr; }
     .about-grid { grid-template-columns: 1fr; }
-    .about-card { padding: 18px 16px; }
-
-    /* Footer */
-    footer { font-size: 0.65rem; padding: 16px 14px; }
+    .hero::before { font-size: 8rem; }
+    td:nth-child(n+6) { display: none; }
+    th:nth-child(n+6) { display: none; }
   }
-
-  /* ── SMALL PHONE (≤390px) ── */
-  @media (max-width: 390px) {
-    .brand-title { font-size: 1.15rem; }
+  @media (max-width: 480px) {
     .hero-stats { grid-template-columns: repeat(2,1fr); }
     .prob-models { grid-template-columns: 1fr; }
-    .sort-btn { font-size: 0.68rem; padding: 6px 10px; }
-    th { font-size: 0.6rem; padding: 7px 8px; }
-    td { font-size: 0.78rem; padding: 8px 8px; }
-    .team-name { max-width: 110px; }
   }
 
   /* ── ANIMATIONS ── */
@@ -632,16 +487,16 @@
         <div class="brand-sub">2026 Season · 10-Method Model</div>
       </div>
     </a>
-    <div class="header-updated">
-      <div class="live-dot"></div>
-      Updated Mar 11, 2026
-    </div>
     <nav class="header-nav">
       <button class="nav-btn active" onclick="showPage('rankings')">Rankings</button>
       <button class="nav-btn" onclick="showPage('predictor')">Predictor</button>
       <button class="nav-btn" onclick="showPage('model')">Model</button>
       <button class="nav-btn" onclick="showPage('about')">About</button>
     </nav>
+    <div class="header-updated">
+      <div class="live-dot"></div>
+      Updated Mar 11, 2026
+    </div>
   </div>
 </header>
 
