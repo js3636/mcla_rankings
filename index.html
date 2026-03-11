@@ -816,7 +816,7 @@ function renderTable() {
   rows.forEach((t, i) => {
     const isExp = expandedTeam === t.name;
     const rankDisp = t.div_rank <= 3
-      ? ['🥇','🥈','🥉'][t.div_rank-1]
+      ? ['1','2','3'][t.div_rank-1]
       : t.div_rank;
     const rankClass = t.div_rank === 1 ? 'rank-1' : t.div_rank === 2 ? 'rank-2' : t.div_rank === 3 ? 'rank-3' : '';
 
