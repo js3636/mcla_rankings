@@ -31,35 +31,7 @@
     min-height: 100vh;
     overflow-x: hidden;
   }
-/* MOBILE HEADER */
-@media (max-width: 768px) {
 
-  .header-inner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-    padding: 12px 16px;
-  }
-
-  .header-nav {
-    width: 100%;
-    overflow-x: auto;
-    gap: 8px;
-  }
-
-  .nav-btn {
-    white-space: nowrap;
-    font-size: 0.75rem;
-    padding: 8px 10px;
-  }
-
-  .header-updated {
-    border-left: none;
-    margin-left: 0;
-    padding-left: 0;
-  }
-
-}
   /* ── HEADER ── */
   .site-header {
     background: var(--bg);
@@ -181,31 +153,7 @@
     letter-spacing: 0.12em; text-transform: uppercase;
     margin-top: 4px;
   }
-/* MOBILE HERO */
-@media (max-width: 768px) {
 
-  .hero {
-    padding: 28px 16px 24px;
-  }
-
-  .hero-inner {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
-  .hero-title {
-    font-size: 2.5rem;
-    line-height: 1;
-  }
-
-  .hero::before {
-    font-size: 10rem;
-    top: -10px;
-    right: -10px;
-    opacity: 0.2;
-  }
-
-}
   /* ── MAIN LAYOUT ── */
   .page-body {
     max-width: 1400px; margin: 0 auto;
@@ -272,7 +220,6 @@
   .sort-btn:hover:not(.active) { border-color: var(--muted2); color: var(--text); }
 
   /* ── RANKINGS TABLE ── */
-  
   .table-wrap {
     background: var(--bg2); border: 1px solid var(--border);
     border-radius: 10px; overflow: hidden;
@@ -329,16 +276,6 @@
   }
   .mini-bar-fill { height: 100%; border-radius: 2px; }
   .mini-bar-val { font-size: 0.7rem; color: var(--muted); width: 24px; }
-/* TABLE RESPONSIVENESS */
-
-.table-container {
-  width: 100%;
-  overflow-x: auto;
-}
-
-table {
-  min-width: 800px;
-}
 
   /* ── EXPANDED ROW ── */
   .expand-row td {
